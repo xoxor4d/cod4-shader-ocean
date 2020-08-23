@@ -1,5 +1,12 @@
 ## A Call of Duty 4 - Realtime / dynamic ocean shader, fully customizable in-game via the use of the IW3xo client
 
+![](https://xoxor4d.github.io/assets/img/shader-ocean/prev03.jpg)
+
+<p float="left">
+  <img src="https://xoxor4d.github.io/assets/img/shader-ocean/prev01.jpg" width="49%" />
+  <img src="https://xoxor4d.github.io/assets/img/shader-ocean/prev02.jpg" width="49%" align="right" /> 
+</p>
+
 #### Using the shader:
 1. Clone the repo or download as zip
 2. Copy all files into the cod4 root directory
@@ -53,3 +60,7 @@ https://discord.gg/t5jRGbj
 
 ## Credits
 - https://github.com/tuxalin/water-shader
+
+___
+
+[![Play](https://xoxor4d.github.io/assets/img/shader-ocean/vid01.jpg)](https://www.youtube.com/watch?v=0lDc3uzDOD4)
