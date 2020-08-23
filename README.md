@@ -10,7 +10,7 @@
 
 #### Tweaking in-game using the GUI:
 1. Use IW3xo and the built in command "/devgui" -> ocean tab to tweak the shader however you like. Use the export button to export your settings. (root/iw3xo/shader_settings/ocean_settings.txt)
-2. Overwrite the static shader constants inside the #else block (if USE_CUSTOM_CONSTANTS is not defined) in both the vertex and pixelshader. Note that both are sharing 3 of the exported constants.
+2. Overwrite the static shader constants inside the __#else block__ (if __USE_CUSTOM_CONSTANTS__ is not defined) in both the vertex and pixelshader. Note that both are sharing 3 of the exported constants.
 3. The shader ships with in-game tweaking enabled, requiring IW3xo to be used. This can be disabled by commenting "//" __#define USE_CUSTOM_CONSTANTS__ in both the vertex and pixelshader.
 4. Disabling __USE_CUSTOM_CONSTANTS__ will enable vanilla cod4 usage. You have to do this before you ship your mod/map. 
 
@@ -19,10 +19,10 @@
 - Expecting that you already have the shader up and running in your map/mod, do the following:
   - Include the following in your fastfile zone:
 
-  >> material,dynamic_ocean
-  >> techset,mc_worldfx_ocean
-  >> techset,wc_worldfx_ocean
-  >> techset,worldfx_ocean
+  > material,dynamic_ocean  
+  > techset,mc_worldfx_ocean  
+  > techset,wc_worldfx_ocean  
+  > techset,worldfx_ocean  
 
   - Modify the shader and recompile it
   - Build the fastfile
@@ -34,7 +34,7 @@
 #### Note:
 - Flat plane models with lots of vertices work best (for obvious reasons)
 - The shader was written to be used with models. It does however work with terrain patches and alike. It just wont look as good.
-- The _unlit variant will be used in radiant or in-game when r_fullbright is turned on. Please note that the _unlit variant does not support custom shader constants, meaning it cannot be controlled in-game. 
+- The _unlit variant will be used in radiant or in-game when r_fullbright is turned on. Please note that the _unlit variant does not support custom shader constants, meaning it cannot be controlled in-game. (use to the addon fastfile method instead) 
 
 ___
 
