@@ -1,0 +1,31 @@
+// * xoxor4d.github.io/projects/cod4-ocean/
+// * original shader : https://github.com/tuxalin/water-shader
+
+#include "commonsetup.template"
+
+#if "@customString@" != ""
+	techniqueSet( "@customString@" );
+#else
+    #error "<customString> cannot be empty! Define the techset (without prefix/extension) that you want to use for your material!"
+#endif
+
+textureTable
+{
+	#if "$colorMap$" != ""
+		"colorMap" = cubemap( "no tile", "@filterColor@", "$colorMap$", @nopicmipColor@ ) "@formatColor@" : "colorMap";
+	#else
+		#error "missing cubeMap for reflection/radiance!"
+	#endif
+
+	#if "$normalMap$" == ""
+		#error "missing water normal map!"
+	#endif
+	"normalMap" = map( "@tileColor@", "@filterColor@", "$normalMap$", @nopicmipColor@ ) "@formatColor@" : "normalMap";
+
+	#if "$specColorMap$" == ""
+		#error "missing foam (rgb)"
+	#endif
+	"specularMap" = map( "@tileColor@", "@filterColor@", "$specColorMap$", @nopicmipColor@ ) "@formatColor@" : "specularMap";
+}
+
+refCubeImage( "$colorMap$" );

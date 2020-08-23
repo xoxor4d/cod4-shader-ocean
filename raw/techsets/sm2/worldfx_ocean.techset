@@ -1,0 +1,11 @@
+"solid wireframe":
+	wireframe_solid;
+
+"fakelight normal":
+"fakelight view":
+"unlit":
+	worldfx_ocean_unlit;
+
+"emissive shadow":
+"emissive":
+	worldfx_ocean;

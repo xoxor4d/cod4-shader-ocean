@@ -1,0 +1,18 @@
+// * xoxor4d.github.io/projects/cod4-ocean/
+// * original shader : https://github.com/tuxalin/water-shader
+
+{
+	stateMap "default";
+
+	vertexShader 3.0 "worldfx_ocean_unlit"
+	{
+	}
+
+	pixelShader 3.0 "worldfx_ocean_unlit"
+	{
+		skyMapSampler = material.colorMap; // cubemap for radiance and or reflection
+		normalMapSampler = material.normalMap; // water normal
+	}
+
+	vertex.position = code.position;
+}

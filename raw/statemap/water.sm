@@ -1,0 +1,61 @@
+alphaTest
+{
+	default:
+		Always;
+}
+
+blendFunc
+{
+	default:
+		passthrough;
+}
+
+separateAlphaBlendFunc
+{
+	default:
+		Disable, One, Zero;
+}
+
+cullFace
+{
+	default:
+		passthrough;
+}
+
+depthTest
+{
+	default:
+		passthrough;
+}
+
+depthWrite
+{
+	default:
+		passthrough;
+}
+
+colorWrite
+{
+	default:
+		Enable, Disable;
+}
+
+polygonOffset
+{
+	default:
+		passthrough;
+}
+
+stencil
+{
+	default:
+		Disable,
+		Always, Zero, Zero, Zero,
+		Always, Zero, Zero, Zero;
+}
+
+wireframe
+{
+	default:
+		Disable;
+}
