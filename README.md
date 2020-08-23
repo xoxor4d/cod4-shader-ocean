@@ -34,6 +34,7 @@
 #### Note:
 - Flat plane models with lots of vertices work best (for obvious reasons)
 - The shader was written to be used with models. It does however work with terrain patches and alike. It just wont look as good.
+- Duplicate shader files and assign them to a new material if you need different settings for different enviroments
 - The _unlit variant will be used in radiant or in-game when r_fullbright is turned on. Please note that the _unlit variant does not support custom shader constants, meaning it cannot be controlled in-game. (use to the addon fastfile method instead) 
 
 ___
